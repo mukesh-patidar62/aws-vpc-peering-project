@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AWS VPC Peering Project</title>
+<meta name="description" content="Portfolio documentation for an AWS VPC Peering lab.">
+<style>
+:root{--navy:#0b2e59;--blue:#1769aa;--ink:#19324d;--muted:#5c6f82;--bg:#f3f7fb;--line:#d9e4ef}
+*{box-sizing:border-box}body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+header{background:linear-gradient(120deg,#0b2e59,#1769aa);color:white;padding:52px 20px}
+.wrap{max-width:1050px;margin:auto;padding:0 20px}h1{font-size:clamp(2rem,5vw,3.3rem);line-height:1.1;margin:0 0 12px}header p{max-width:720px;color:#e0edfa}
+main{padding:28px 0 56px}.notice{background:#fff7e6;border:1px solid #f0d59a;padding:16px 18px;border-radius:12px;margin-bottom:24px}
+section{background:white;border:1px solid var(--line);border-radius:16px;padding:22px;margin:18px 0;box-shadow:0 4px 14px #18334b0a}
+h2{margin-top:0;color:var(--navy)}img{width:100%;height:auto;border-radius:10px;border:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}.tile{background:#f7faff;border:1px solid var(--line);padding:15px;border-radius:12px}
+a{color:#075eb0}code{background:#edf3f9;padding:2px 5px;border-radius:4px}footer{padding:24px;text-align:center;color:var(--muted)}
+</style></head>
+<body>
+<header><div class="wrap"><h1>AWS VPC Peering</h1><p>Private communication between two Amazon VPCs using peering, route tables, security groups, and bastion-host access.</p></div></header>
+<main class="wrap">
+<div class="notice"><strong>Implementation status:</strong> This is a project template. Architecture is illustrative; AWS deployment and connectivity tests are not verified until the author replaces placeholders with their own evidence.</div>
+<section><h2>Architecture</h2><img src="docs/images/architecture.png" alt="Illustrative AWS VPC peering architecture"><p>VPC A uses <code>10.10.0.0/16</code>; VPC B uses <code>10.20.0.0/16</code>. Peering routes must be configured in both VPCs, and security rules must permit the intended traffic.</p></section>
+<section><h2>What this project demonstrates</h2><div class="grid">
+<div class="tile"><strong>VPC design</strong><br>Non-overlapping CIDR ranges and subnet separation.</div>
+<div class="tile"><strong>Routing</strong><br>Internet Gateway for the bastion and private peering routes.</div>
+<div class="tile"><strong>Security</strong><br>Restricted SSH and ICMP rules using least privilege.</div>
+<div class="tile"><strong>Verification</strong><br>Bidirectional ping, SSH testing, failure analysis, and recovery.</div>
+</div></section>
+<section><h2>Project files</h2><ul><li><a href="README.md">README and setup instructions</a></li><li><a href="REPORT_TEMPLATE.md">Project report template</a></li><li><a href="docs/architecture.md">Architecture notes</a></li></ul><p>Before presenting this as completed, add real screenshots from your AWS account and record observed test results.</p></section>
+</div></main><footer>AWS VPC Peering portfolio project · Verify all results in your own AWS environment.</footer>
+</body></html>
